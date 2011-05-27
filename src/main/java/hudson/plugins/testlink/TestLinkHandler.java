@@ -184,7 +184,7 @@ public class TestLinkHandler
 				
 				for ( Attachment attachment : testResult.getAttachments() )
 				{
-					listener.getLogger().println( Messages.TestLinkBuilder_Upload_ExecutionAttachment(reportTCResultResponse.getExecutionId(), attachment.getFileName()) );
+					listener.getLogger().println( Messages.TestLinkBuilder_Upload_ExecutionAttachment(reportTCResultResponse.getExecutionId(), attachment.getDescription()+" - "+attachment.getFileName()) );
 					api.uploadExecutionAttachment(
 							reportTCResultResponse.getExecutionId(), 
 							attachment.getTitle(), 
